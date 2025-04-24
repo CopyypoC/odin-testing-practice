@@ -11,3 +11,7 @@ test('shift of 1 from "abc" to "bcd"', () => {
 test('case preservation with shift 1 from "aBc" "bCd"', () => {
   expect(caesarCipher("aBc", 1)).toBe("bCd");
 });
+
+test("ignore non-alphabet chars", () => {
+  expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
+});
